@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM知识库导航</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --hover-color: #e74c3c;
+            --bg-color: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', '微软雅黑', sans-serif;
+            line-height: 1.6;
+            background: var(--bg-color);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 3px solid var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .category-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .category {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .sub-category {
+            margin: 1rem 0;
+        }
+
+        .sub-category h3 {
+            color: #7f8c8d;
+            font-size: 0.95em;
+            margin-bottom: 0.5rem;
+        }
+
+        .link-list {
+            list-style: none;
+        }
+
+        .link-item {
+            margin: 0.5rem 0;
+            padding: 0.3rem 0;
+        }
+
+        .link-item a {
+            color: #34495e;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        .link-item a:hover {
+            background: #f0f3f5;
+            color: var(--hover-color);
+            padding-left: 1rem;
+        }
+
+        .link-item a::before {
+            content: "➤";
+            color: var(--secondary-color);
+            margin-right: 0.8rem;
+            transition: margin 0.2s;
+        }
+
+        .link-item a:hover::before {
+            margin-right: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .category-group {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📚 PM知识库导航</h1>
+        </header>
+
+        <!-- 工具/文档 -->
+        <div class="category-group">
+            <div class="category">
+                <h2>🛠 工具/文档</h2>
+                <div class="sub-category">
+                    <h3>原型工具</h3>
+                    <ul class="link-list">
+                        <li class="link-item"><a href="https://www.axureshop.com/">Axure原型商店</a></li>
+                        <li class="link-item"><a href="https://www.axure.com.cn/resource/">Axure中文资源</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sub-category">
+                    <h3>数据平台</h3>
+                    <ul class="link-list">
+                        <li class="link-item"><a href="https://www.qimai.cn/">七麦数据</a></li>
+                        <li class="link-item"><a href="https://dh.woshipm.com/">阿猫阿狗导航</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 产品设计 -->
+            <div class="category">
+                <h2>🎨 产品设计</h2>
+                <div class="sub-category">
+                    <h3>原型设计</h3>
+                    <ul class="link-list">
+                        <li class="link-item"><a href="https://www.pmdaniu.com/">产品大牛原型托管</a></li>
+                        <li class="link-item"><a href="https://coffee.pmcaff.com/article/zNBrD6mnLe/coffee">交互文档指南</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sub-category">
+                    <h3>设计规范</h3>
+                    <ul class="link-list">
+                        <li class="link-item"><a href="https://coffee.pmcaff.com/article/KDLE652NQx/coffee">弹窗设计指南</a></li>
+                        <li class="link-item"><a href="https://coffee.pmcaff.com/article/Zdkj7NNMLV/coffee">按钮设计规范</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 运营增长 -->
+        <div class="category-group">
+            <div class="category">
+                <h2>🚀 运营增长</h2>
+                <div class="sub-category">
+                    <h3>用户增长</h3>
+                    <ul class="link-list">
+                        <li class="link-item"><a href="https://36kr.com/p/5255979">邀请裂变案例</a></li>
+                        <li class="link-item"><a href="https://coffee.pmcaff.com/article/8gLp6e14B5/coffee">需求分析指南</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sub-category">
+                    <h3>会员体系</h3>
+                    <ul class="link-list">
+                        <li class="link-item"><a href="https://vip.qidianla.com/">起点学院会员</a></li>
+                        <li class="link-item"><a href="https://coffee.pmcaff.com/article/zmLW3yDVLG/coffee">会员体系设计</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 行业分析 -->
+            <div class="category">
+                <h2>📈 行业分析</h2>
+                <div class="sub-category">
+                    <h3>产品案例</h3>
+                    <ul class="link-list">
+                        <li class="link-item"><a href="http://www.woshipm.com/pd/317233.html">网易云音乐UX分析</a></li>
+                        <li class="link-item"><a href="https://36kr.com/p/756894662977031">TikTok算法解析</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sub-category">
+                    <h3>数据工具</h3>
+                    <ul class="link-list">
+                        <li class="link-item"><a href="https://www.ui.cn/">UI中国</a></li>
+                        <li class="link-item"><a href="http://www.chinaui.com/">优艾网</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
